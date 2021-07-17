@@ -15,7 +15,3 @@ const PORT = process.env.PORT || 8000;
 
 assertDatabaseConnectionOk();
 app.listen(PORT, () => logger.info(`Server listening on Port ${PORT}`));
-
-webhookGetAll()
-  .then((response) => console.log(response))
-  .catch((err) => console.log(err));

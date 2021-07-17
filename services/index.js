@@ -1,18 +1,20 @@
 "use strict";
 
 const { ServiceBroker } = require("moleculer");
-const ApiService = require("moleculer-web");
+const webHookService = require("./webhook.service");
 
-// Create broker
 const broker = new ServiceBroker({
   logger: console,
   cacher: "memory",
   metrics: true,
   validation: true,
+  namespace: "dev",
 });
 
 // Load API Gateway
-broker.createService(ApiService);
+broker.createService(webHookService);
 
 // Start server
 broker.start();
+
+module.exports = { broker };

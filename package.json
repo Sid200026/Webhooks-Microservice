@@ -4,6 +4,7 @@
   "description": "Webhooks Microservice using Moleculer and a backend using Express",
   "main": "index.js",
   "scripts": {
+    "webhook": "nodemon services/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js"
   },
