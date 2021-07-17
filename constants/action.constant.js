@@ -2,7 +2,7 @@ const LIST_ACTION = "v1.webhooks.list";
 const REGISTER_ACTION = "v1.webhooks.register";
 const UPDATE_ACTION = "v1.webhooks.update";
 const DELETE_ACTION = "v1.webhooks.delete";
-const TRIGGER_ACTION = "v1.webhooks.trigget";
+const TRIGGER_ACTION = "v1.webhooks.trigger";
 
 module.exports = {
   LIST_ACTION,

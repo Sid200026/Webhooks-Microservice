@@ -6,6 +6,7 @@ const {
   REGISTER_ACTION,
   UPDATE_ACTION,
   DELETE_ACTION,
+  TRIGGER_ACTION,
 } = require("../constants/action.constant");
 
 const listController = async (_req, res) => {
@@ -31,9 +32,16 @@ const deleteController = async (req, res) => {
   res.send(response);
 };
 
+const triggerController = async (req, res) => {
+  const { ipAddress } = req.query;
+  const response = await broker.call(TRIGGER_ACTION, { ipAddress });
+  res.send(response);
+};
+
 module.exports = {
   listController,
   registerController,
   updateController,
   deleteController,
+  triggerController,
 };
